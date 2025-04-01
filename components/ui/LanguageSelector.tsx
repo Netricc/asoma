@@ -34,7 +34,8 @@ const LanguageSelector = () => {
       dir={`${language === "ar" ? "rtl" : "ltr"}`}
     >
       <select
-        className="w-full rounded-full px-[26px] py-[12px] text-base font-medium text-white outline-none cursor-pointer border-white hover:border-gray-light focus:border-primary bg-transparent border-2 appearance-none"
+        className="w-full rounded-full px-[26px] py-[12px] text-base font-medium text-white outline-none cursor-pointer border-white hover:border-gray-light focus:border-primary bg-transparent border-2 appearance-none
+             [&>option]:bg-gray-800 [&>option]:text-white"
         value={language}
         onChange={handleLanguageChange}
         onFocus={() => setIsOpen(true)}
@@ -44,7 +45,6 @@ const LanguageSelector = () => {
         <option value="ar">العربية</option>
         <option value="de">Deutschland</option>
       </select>
-
       <div
         className={`absolute inset-y-0 ${
           language === "ar" ? "left-4" : "right-4"
