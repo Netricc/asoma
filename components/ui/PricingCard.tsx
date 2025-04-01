@@ -13,7 +13,9 @@ const PricingCard = ({
   description,
   title,
 }: TpriceCard) => {
-  const { language } = useContext(AppContext) || { language: "en" };
+  const context = useContext(AppContext);
+  const language = (context?.language as "en" | "ar" | "de") || "en";
+  const dashboardUrl = context?.dashboardUrl;
   return (
     <article className="min-h-[350px] max-md:w-full hover:scale-105 hover:shadow-lg duration-200  relative py-[16px] px-[23px] w-[360px] border-2 rounded-[16px] border-gray-light/2">
       <div>
@@ -46,7 +48,7 @@ const PricingCard = ({
         <div className="w-full absolute bottom-0 py-[16px]">
           <Link
             className="font-cairo font-black text-black text-base max-sm:text-[14px] hover:text-primary duration-200"
-            href={"#dashboard"}
+            href={dashboardUrl ? dashboardUrl : "#dashboard"}
           >
             {language === "en"
               ? "CHOOSE PLAN"
