@@ -64,7 +64,7 @@ const Hero = () => {
             } w-full max-lg:w-full leading-[53px] first-letter:text-secondary`}
           >
             {language === "en"
-              ? "Asoma – The ultimate place to bring your amazing. Keep that in mind..."
+              ? "Asoma – The ultimate place to bring your amazing product to life. Keep that in mind..."
               : language === "ar"
               ? "أسوما – المكان الأمثل لإحياء منتجك المذهل. ضع ذلك في اعتبارك..."
               : "Asoma – Der ultimative Ort, um dein erstaunliches Produkt zum Leben zu erwecken. Behalte das im Hinterkopf..."}
